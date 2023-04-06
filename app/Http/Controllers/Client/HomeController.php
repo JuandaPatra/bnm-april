@@ -21,6 +21,7 @@ use App\Models\Contact;
 use App\Mail\ContactMail;
 
 
+
 class HomeController extends Controller
 {
 

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Client\HomeController;
+use App\Http\Controllers\PHPMailerController;
 use App\Mail\HelloMail;
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +54,8 @@ Route::get('/mail', function(){
         $message->to($to)->bcc(['patrajuanda10@gmail.com', 'bnm.stainlesssteel.MKT@gmail.com', 'putriaisyah245@gmail.com'])->subject('Testmail'); 
     });
 });
+
+Route::get('/sendphp', [PHPMailerController::class,'email']);
 
 Route::get('/search/', [HomeController::class,'search'])->name('search');
 
